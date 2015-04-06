@@ -1,0 +1,26 @@
+/* Docs site styles */
+
+@import 'basscss-base-reset';
+@import 'basscss-base-buttons';
+@import 'basscss-base-typography';
+
+@import 'basscss-utility-layout';
+@import 'basscss-utility-typography';
+@import 'basscss-utility-headings';
+@import 'basscss-utility-white-space';
+
+@import 'basscss-color-base';
+@import 'basscss-colors';
+
+@import 'basscss-defaults';
+
+.x > div,
+.xx > div {
+  /*outline: 2px solid color(var(--orange), alpha(.5)); */
+  outline: 2px solid var(--orange);
+}
+
+:root {
+  --font-family: 'Roboto', sans-serif;
+}
+

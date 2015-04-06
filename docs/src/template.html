@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>x</title>
+  <meta name="author" content="<%= author %>">
+  <meta name="description" content="<%= description %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="docs/basscss.min.css">
+  <link rel="stylesheet" href="x.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+</head>
+<body class="px3">
+
+  <header class="center py3 mb3">
+    <h1 class="h00 h00-responsive m0">x</h1>
+    <p class="caps"><%= description %></p>
+  </header>
+
+  <div class="x">
+    <div><%= filesize(stats.gzipSize) %></div>
+    <div><%= stats.rules.length %> Rules</div>
+  </div>
+
+
+  <%= obj.examples %>
+
+  <footer class="py3 mt4">
+    <a href="//jxnblk.com/x">x</a>
+    v<%= version %>
+    <p>
+      Made by
+      <a href="//jxnblk.com">Jxnblk</a>
+    </p>
+  </footer>
+
+</body>
+</html>

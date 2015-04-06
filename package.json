@@ -1,0 +1,48 @@
+{
+  "name": "x-axis",
+  "version": "1.0.0",
+  "description": "Hyperminimal CSS grid layout alternative",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test",
+    "css": "cssnext src/x.css x.css",
+    "watch:css": "cssnext src/x.css x.css -w",
+    "css:min": "cssnext src/x.css x.min.css -c",
+    "watch:css:min": "cssnext src/x.css x.min.css -w -c",
+    "docs": "node docs/build",
+    "watch:docs": "onchange './docs/src/**/*' -- npm run docs",
+    "docs:css": "cssnext docs/src/basscss.css docs/basscss.min.css -c",
+    "watch:docs:css": "cssnext docs/src/basscss.css docs/basscss.min.css -w -c",
+    "serve": "http-server -p 8000",
+    "start": "npm run watch:css & npm run watch:css:min & npm run watch:docs & npm run watch:docs:css & npm run serve"
+  },
+  "keywords": [
+    "css",
+    "oocss",
+    "layout",
+    "grid",
+    "flexbox"
+  ],
+  "author": "Brent Jackson",
+  "license": "MIT",
+  "devDependencies": {
+    "basscss-base-buttons": "^1.0.7",
+    "basscss-base-reset": "0.0.3",
+    "basscss-base-typography": "0.0.4",
+    "basscss-color-base": "^1.2.0",
+    "basscss-colors": "^1.0.6",
+    "basscss-defaults": "^1.0.3",
+    "basscss-utility-headings": "0.0.6",
+    "basscss-utility-layout": "0.0.2",
+    "basscss-utility-typography": "0.0.2",
+    "basscss-utility-white-space": "0.0.4",
+    "cssnext": "^1.2.1",
+    "cssstats": "^1.4.0",
+    "filesize": "^3.1.2",
+    "http-server": "^0.8.0",
+    "lodash": "^3.6.0",
+    "marked": "^0.3.3",
+    "marked-example": "^1.0.4",
+    "onchange": "^1.0.0"
+  }
+}

@@ -1,0 +1,41 @@
+
+.x { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex }
+
+.x > div:not(.x1):not(.x2):not(.x3):not(.x4):not(.x6):not(.x8) {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+
+.x1, .x2, .x3, .x4, .x6, .x8 { -webkit-box-flex: 0; -webkit-flex: none; -ms-flex: none; flex: none }
+
+.x1 { width: 100% }
+.x2 { width: 50% }
+.x3 { width: 33.33333% }
+.x4 { width: 25% }
+.x6 { width: 16.66667% }
+.x8 { width: 12.5% }
+
+
+.x-center   { -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center }
+.x-baseline { -webkit-box-align: baseline; -webkit-align-items: baseline; -ms-flex-align: baseline; align-items: baseline }
+.x-bottom   { -webkit-box-align: end; -webkit-align-items: end; -ms-flex-align: end; align-items: end }
+.x-wrap     { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap }
+
+.x-fill { -webkit-box-flex: 1; -webkit-flex: 1 0 auto; -ms-flex: 1 0 auto; flex: 1 0 auto }
+.x-none     { -webkit-box-flex: 0; -webkit-flex: none; -ms-flex: none; flex: none }
+
+
+@media (min-width: 40em) {
+  .xx { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex }
+  .xx1 { width: 100% }
+  .xx2 { width: 50% }
+  .xx3 { width: 33.33333% }
+  .xx4 { width: 25% }
+  .xx6 { width: 16.66667% }
+  .xx8 { width: 12.5% }
+}
+
