@@ -14,9 +14,9 @@ var css = fs.readFileSync(path.join(__dirname, '../x.min.css'), 'utf8');
 var renderer = new marked.Renderer();
 renderer.code = markedExample({
   classes: {
-    container: 'mb2 bg-darken-1 rounded',
-    rendered: 'p2',
-    code: 'm0 p2 bg-darken-1 rounded-bottom'
+    container: 'mb2 rounded',
+    rendered: 'py2',
+    code: 'm0 p2 border b2 border-aqua'
   }
 });
 

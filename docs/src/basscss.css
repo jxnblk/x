@@ -10,14 +10,49 @@
 @import 'basscss-utility-white-space';
 
 @import 'basscss-color-base';
+@import 'basscss-button-link';
+@import 'basscss-color-borders';
 @import 'basscss-colors';
+@import 'basscss-highlight';
 
 @import 'basscss-defaults';
 
-.x > div,
-.xx > div {
-  /*outline: 2px solid color(var(--orange), alpha(.5)); */
-  outline: 2px solid var(--orange);
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  position: relative;
+  color: inherit
+}
+
+h1 a:hover:before,
+h2 a:hover:before,
+h3 a:hover:before,
+h4 a:hover:before,
+h5 a:hover:before,
+h6 a:hover:before {
+  content: '#';
+  position: absolute;
+  left: -.75em;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.b2 { border-width: 2px }
+
+/* x demonstration */
+.MarkedExample .x > div,
+.MarkedExample .sm-x > div,
+.MarkedExample .xx > div {
+  font-weight: bold;
+  text-align: center;
+  box-shadow: inset 0 0 0 2px color(var(--aqua) a(.5));
+}
+.MarkedExample-code {
+  max-height: 40vh;
+  background-color: transparent;
 }
 
 :root {

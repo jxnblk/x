@@ -1,11 +1,9 @@
 
 .x { display: flex }
 
-.x > div:not(.x1):not(.x2):not(.x3):not(.x4):not(.x6):not(.x8) {
+.x > div {
   box-sizing: border-box;
-  flex: 1 1 auto;
 }
-
 
 .x1, .x2, .x3, .x4, .x6, .x8 { flex: none }
 
@@ -16,28 +14,30 @@
 .x6 { width: calc(1/6 * 100%) }
 .x8 { width: calc(1/8 * 100%) }
 
+.xg { flex: 1 0 auto }
+.xn { flex: none }
+
 
 .x-center   { align-items: center }
 .x-baseline { align-items: baseline }
 .x-bottom   { align-items: end }
 .x-wrap     { flex-wrap: wrap }
 
-.x-fill { flex: 1 0 auto }
-.x-none     { flex: none }
-
 
 @media (--breakpoint-sm) {
-  .xx { display: flex }
-  .xx1 { width: 100% }
-  .xx2 { width: calc(1/2 * 100%) }
-  .xx3 { width: calc(1/3 * 100%) }
-  .xx4 { width: calc(1/4 * 100%) }
-  .xx6 { width: calc(1/6 * 100%) }
-  .xx8 { width: calc(1/8 * 100%) }
+  .sm-x { display: flex }
+  .sm-x1 { width: 100% }
+  .sm-x2 { width: calc(1/2 * 100%) }
+  .sm-x3 { width: calc(1/3 * 100%) }
+  .sm-x4 { width: calc(1/4 * 100%) }
+  .sm-x6 { width: calc(1/6 * 100%) }
+  .sm-x8 { width: calc(1/8 * 100%) }
 }
 
 
 @custom-media --breakpoint-sm (min-width: 40em);
+@custom-media --breakpoint-md (min-width: 52em);
+@custom-media --breakpoint-lg (min-width: 64em);
 
 :root {
 }

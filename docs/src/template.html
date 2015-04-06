@@ -17,18 +17,21 @@
     <p class="caps"><%= description %></p>
   </header>
 
-  <div class="x">
-    <div><%= filesize(stats.gzipSize) %></div>
-    <div><%= stats.rules.length %> Rules</div>
+  <div class="x h3 bold caps py3">
+    <div class="xg"><%= filesize(stats.gzipSize) %></div>
+    <div class="xg"><%= stats.rules.length %> Rules</div>
   </div>
 
 
   <%= obj.examples %>
 
-  <footer class="py3 mt4">
-    <a href="//jxnblk.com/x">x</a>
-    v<%= version %>
-    <p>
+  <footer class="x x-baseline py3 mt4 mxn1">
+    <a href="//jxnblk.com/x" class="button button-small ml1 mr1 button-link">x</a>
+    <div class="px1">
+      v<%= version %>
+    </div>
+    <div class="xg"></div>
+    <p class="xn m0 px1">
       Made by
       <a href="//jxnblk.com">Jxnblk</a>
     </p>
