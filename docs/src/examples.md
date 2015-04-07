@@ -290,14 +290,72 @@
 </div>
 ```
 
+## xs
+
 ```html
 <div class="x x-wrap">
-  <div class="x2 sm-x3 p2">.x2</div>
-  <div class="x2 sm-x3 p2">.x2</div>
-  <div class="x2 sm-x3 p2">.x2</div>
-  <div class="x2 sm-x3 p2">.x2</div>
-  <div class="x2 sm-x3 p2">.x2</div>
-  <div class="x2 sm-x3 p2">.x2</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+  <div class="xs p2">.xs</div>
+</div>
+```
+
+## xm
+
+```html
+<div class="x x-wrap">
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+</div>
+```
+
+## xl
+
+```html
+<div class="x x-wrap">
+  <div class="xl p2">.xl</div>
+  <div class="xl p2">.xl</div>
+  <div class="xl p2">.xl</div>
+  <div class="xl p2">.xl</div>
+  <div class="xl p2">.xl</div>
+  <div class="xl p2">.xl</div>
+  <div class="xl p2">.xl</div>
+  <div class="xl p2">.xl</div>
+  <div class="xl p2">.xl</div>
+  <div class="xl p2">.xl</div>
+  <div class="xl p2">.xl</div>
+  <div class="xl p2">.xl</div>
 </div>
 ```
 
