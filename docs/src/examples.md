@@ -10,7 +10,7 @@ Apply `.x` to a parent container to align items on the x-axis.
 </div>
 ```
 
-## xg
+## .xg
 
 Add `.xg` to make a child element grow to fill the space.
 
@@ -39,7 +39,7 @@ Add `.xg` to make a child element grow to fill the space.
 </div>
 ```
 
-## xn
+## .xn
 
 ```html
 <div class="x">
@@ -53,7 +53,7 @@ Add `.xg` to make a child element grow to fill the space.
 </div>
 ```
 
-## x-center
+## .x-center
 
 ```html
 <div class="x x-center">
@@ -67,20 +67,26 @@ Add `.xg` to make a child element grow to fill the space.
 </div>
 ```
 
-## x-baseline
+## .x-baseline
 
 ```html
 <div class="x x-baseline">
   <div class="xg p2">
-    <h1 class="border-bottom border-aqua">align-items baseline</h1>
+    <h1>
+      <span class="baseline"></span>
+      align-items baseline
+    </h1>
   </div>
   <div class="xn p2">
-    <h2 class="border-bottom border-aqua">.xn</h2>
+    <h2 class="">
+      <span class="baseline"></span>
+      .xn
+    </h2>
   </div>
 </div>
 ```
 
-## x-bottom
+## .x-bottom
 
 ```html
 <div class="x x-bottom">
@@ -94,7 +100,7 @@ Add `.xg` to make a child element grow to fill the space.
 </div>
 ```
 
-## x2
+## .x2
 
 ```html
 <div class="x">
@@ -121,7 +127,7 @@ Add `.xg` to make a child element grow to fill the space.
 </div>
 ```
 
-## x3
+## .x3
 
 ```html
 <div class="x">
@@ -152,7 +158,7 @@ Add `.xg` to make a child element grow to fill the space.
 </div>
 ```
 
-## x4
+## .x4
 
 ```html
 <div class="x">
@@ -187,7 +193,7 @@ Add `.xg` to make a child element grow to fill the space.
 </div>
 ```
 
-## x6
+## .x6
 
 ```html
 <div class="x">
@@ -230,7 +236,7 @@ Add `.xg` to make a child element grow to fill the space.
 </div>
 ```
 
-## x8
+## .x8
 
 ```html
 <div class="x">
@@ -281,7 +287,7 @@ Add `.xg` to make a child element grow to fill the space.
 </div>
 ```
 
-## x-wrap
+## .x-wrap
 
 ```html
 <div class="x x-wrap">
@@ -294,7 +300,7 @@ Add `.xg` to make a child element grow to fill the space.
 </div>
 ```
 
-## x-justify
+## .x-justify
 
 ```html
 <div class="x x-justify">
@@ -304,7 +310,7 @@ Add `.xg` to make a child element grow to fill the space.
 </div>
 ```
 
-## xs
+## .xs
 
 ```html
 <div class="x x-wrap">
@@ -335,11 +341,30 @@ Add `.xg` to make a child element grow to fill the space.
 </div>
 ```
 
-## xm overflow
+## .xm 
+
+```html
+<div class="x x-wrap">
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+  <div class="xm p2">.xm</div>
+</div>
+```
+
+## .xm overflow
 
 ```html
 <div class="overflow-auto">
-  <div class="x xx-wrap">
+  <div class="x">
     <div class="xm p2">.xm</div>
     <div class="xm p2">.xm</div>
     <div class="xm p2">.xm</div>
@@ -356,7 +381,7 @@ Add `.xg` to make a child element grow to fill the space.
 </div>
 ```
 
-## xl
+## .xl
 
 ```html
 <div class="x x-wrap">

@@ -8,13 +8,14 @@
 @import 'basscss-utility-typography';
 @import 'basscss-utility-headings';
 @import 'basscss-utility-white-space';
+@import 'basscss-ui-utility-button-sizes';
 
 @import 'basscss-color-base';
 @import 'basscss-button-outline';
 @import 'basscss-button-link';
 @import 'basscss-color-borders';
 @import 'basscss-colors';
-@import 'basscss-highlight';
+/* @import 'basscss-highlight'; */
 
 @import 'basscss-defaults';
 
@@ -43,27 +44,61 @@ h6 a:hover:before {
 
 code {
   font-size: 87.5%;
+  /*
   background-color: transparent;
-  background-color: color(var(--red) a(.0625));
+  background-color: color(var(--red) a(.125));
   color: color(var(--red) l(25%));
+  */
 }
+
+pre { color: var(--blue) }
+
+.bg-black pre { color: var(--aqua) }
 
 .b2 { border-width: 2px }
 
+.columns { columns: 18em }
+.columns > * { break-inside: avoid }
+
 .prose h1, .prose h2, .prose h3 { margin-top: 2em }
 
+.baseline {
+  display: inline-block;
+  width: 100%;
+  margin-right: -100%;
+  position: relative;
+  top: 2px;
+  z-index: 10;
+  border-top: 2px solid color(var(--red) a(.5));
+}
+
+
 /* x demonstration */
-.MarkedExample .x > div,
-.MarkedExample .sm-x > div,
-.MarkedExample .xx > div {
-  /* font-weight: bold; */
+.MarkedExample-rendered div {
+  color: var(--blue);
+  box-shadow: inset 0 0 0 2px color(var(--blue) a(.75));
+}
+.bg-black .MarkedExample-rendered div {
+  color: var(--aqua);
   box-shadow: inset 0 0 0 2px color(var(--aqua) a(.75));
 }
+.MarkedExample h1,
+.MarkedExample h2,
+.MarkedExample h3,
+.MarkedExample p {
+  margin: 0;
+}
+
 .MarkedExample-code {
   max-height: 40vh;
-  background-color: transparent;
-  background-color: color(var(--aqua) a(.0625));
+  /* background-color: color(var(--aqua) l(95%)); */
+  color: var(--blue);
   box-shadow: inset 0 0 0 2px color(var(--aqua) a(.25));
+}
+.MarkedExample-code,
+code,
+.bg-aqua-alpha {
+  background-color: color(var(--aqua) a(.125));
 }
 
 :root {
@@ -72,12 +107,13 @@ code {
   --heading-font-weight: 600;
   --button-font-weight: 600;
   --h1: 2.5rem;
-  --h2: 1.75rem;
+  --h2: 1.5rem;
   --h3: 1.25rem;
   --h4: 1.125rem;
   --h5: 1rem;
   --h6: .875rem;
 
   --black: #263649;
+  --black: #223033;
 }
 

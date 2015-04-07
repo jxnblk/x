@@ -36,6 +36,8 @@
     "basscss-colors": "^1.0.6",
     "basscss-defaults": "^1.0.3",
     "basscss-highlight": "^0.1.0",
+    "basscss-highlight-dark": "0.0.1",
+    "basscss-ui-utility-button-sizes": "^1.0.0",
     "basscss-utility-headings": "0.0.6",
     "basscss-utility-layout": "0.0.2",
     "basscss-utility-typography": "0.0.2",

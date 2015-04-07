@@ -8,22 +8,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="docs/basscss.min.css">
   <link rel="stylesheet" href="x.min.css">
-  <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,600,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,600|Source+Code+Pro" rel="stylesheet" type="text/css">
 </head>
 <body class="px3">
 
   <header class="center py4">
     <h1 class="h00 h00-responsive m0">.x</h1>
     <p class="caps"><%= description %></p>
-    <a href="//github.com/jxnblk/x" class="h6 caps m1 button button-outline">Github</a>
-    <a href="//npmjs.com/package/dot-x" class="h6 caps m1 button button-outline">npm</a>
+    <div>
+      <a href="//github.com/jxnblk/x" class="h6 caps m1 button button-outline">Github</a>
+      <a href="//npmjs.com/package/dot-x" class="h6 caps m1 button button-outline">npm</a>
+    </div>
+    <code class="h4 inline-block px1 mt1 blue">npm install dot-x</code>
   </header>
 
   <section id="intro" class="py3 mb3">
     <p class="h1">
       A fundamentally different approach to handling layout in CSS
     </p>
-    <p class="h3">
+    <p class="h2">
       Instead of adding up columns, .x is based around content sizes and dividing up
       available space, which makes it perfect for responsive web design.
       No clearfix, white space, or display table hacks – just a simple abstraction of
@@ -39,20 +42,21 @@
   </div>
 
   <section id="features" class="py3 mb3">
-    <h2 class="h3 caps">Features</h2>
-    <ul class="bold center sm-x x-wrap list-reset mxn2">
-      <li class="xg p3">Vertical centering</li>
-      <li class="xg p3">Baseline alignment</li>
-      <li class="xg p3">Bottom alignment</li>
-      <li class="xg p3">Flexbox-based resizing</li>
-      <li class="xg p3">Fraction-based widths</li>
-      <li class="xg p3">Wrapping for template-based iterations</li>
-      <li class="xg p3">Equal height stretching</li>
-      <li class="xg p3">Tiled layout for template-based iterations</li>
-      <li class="xg p3">Width-based breakpoints</li>
+    <h2 class="h3 caps mb3">Features</h2>
+    <ul class="columns list-reset">
+      <li class="mb1">Vertical centering</li>
+      <li class="mb1">Baseline alignment</li>
+      <li class="mb1">Bottom alignment</li>
+      <li class="mb1">Flexbox-based resizing</li>
+      <li class="mb1">Fraction-based widths</li>
+      <li class="mb1">Wrapping for template-based iterations</li>
+      <li class="mb1">Equal height stretching</li>
+      <li class="mb1">Tiled layout for template-based iterations</li>
+      <li class="mb1">Width-based breakpoints</li>
     </ul>
   </section>
 
+  <hr class="b2">
 
   <section id="examples" class="py3 mb3">
     <h2 class="h3 caps">Examples</h2>
@@ -63,7 +67,7 @@
 
   <section id="css" class="py3 mb3">
     <h2 class="caps">CSS</h2>
-    <pre class="p2 border border-aqua bg-white"
+    <pre class="p2 border border-aqua bg-aqua-alpha"
       style="max-height:50vh"><%= obj.css %></pre>
   </section>
 
@@ -80,6 +84,39 @@
       <a href="//jxnblk.com">Jxnblk</a>
     </p>
   </footer>
+
+  <div class="m1" style="position:fixed;top:0;right:0;">
+    <button class="js-night-mode ml1 mr1 button button-outline b2 border-darken-2"
+      title="Toggle night mode">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="block">
+          <path d="M12 0, A 12 12 0 0 0 12 24, A 12 12 0 0 0 12 0 M12 2 V22 A10 10 0 0 1 12 2" />
+        </svg>
+    </button>
+  </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+<script>
+  var hour = moment().hour();
+  var button = document.querySelector('.js-night-mode');
+  var dark = false;
+  document.body.style.transition = 'background .2s ease-out';
+  function toggleTheme() {
+    if (dark) {
+      document.body.classList.add('white', 'bg-black');
+    } else {
+      document.body.classList.remove('white', 'bg-black');
+    }
+  }
+  if (hour > 20 || hour < 6) {
+    dark = true;
+    toggleTheme();
+  }
+  button.addEventListener('click', function() {
+    dark = !dark;
+    toggleTheme();
+  });
+</script>
 
 </body>
 </html>
