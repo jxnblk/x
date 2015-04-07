@@ -1,6 +1,6 @@
 {
   "name": "dot-x",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.1",
   "description": "Hyperminimal CSS flexbox grid & micro layout alternative",
   "main": "index.js",
   "scripts": {
