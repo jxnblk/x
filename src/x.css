@@ -20,9 +20,8 @@
 
 .x-center   { align-items: center }
 .x-baseline { align-items: baseline }
-.x-bottom   { align-items: end }
+.x-bottom   { align-items: flex-end }
 .x-wrap     { flex-wrap: wrap }
-
 
 @media (--breakpoint-sm) {
   .sm-x { display: flex }
@@ -32,13 +31,37 @@
   .sm-x4 { width: calc(1/4 * 100%) }
   .sm-x6 { width: calc(1/6 * 100%) }
   .sm-x8 { width: calc(1/8 * 100%) }
+
+  /* negation test
+    .sm-x1, .nsm.x2, .nsm.x3, .nsm.x4, .nsm.x6, .nsm.x8 { width: 100% }
+   * */
 }
 
+@media (--breakpoint-md) {
+  .md-x { display: flex }
+  .md-x1 { width: 100% }
+  .md-x2 { width: calc(1/2 * 100%) }
+  .md-x3 { width: calc(1/3 * 100%) }
+  .md-x4 { width: calc(1/4 * 100%) }
+  .md-x6 { width: calc(1/6 * 100%) }
+  .md-x8 { width: calc(1/8 * 100%) }
+}
+
+@media (--breakpoint-lg) {
+  .lg-x { display: flex }
+  .lg-x1 { width: 100% }
+  .lg-x2 { width: calc(1/2 * 100%) }
+  .lg-x3 { width: calc(1/3 * 100%) }
+  .lg-x4 { width: calc(1/4 * 100%) }
+  .lg-x6 { width: calc(1/6 * 100%) }
+  .lg-x8 { width: calc(1/8 * 100%) }
+}
 
 @custom-media --breakpoint-sm (min-width: 40em);
 @custom-media --breakpoint-md (min-width: 52em);
 @custom-media --breakpoint-lg (min-width: 64em);
 
 :root {
+
 }
 

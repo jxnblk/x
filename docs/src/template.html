@@ -17,13 +17,16 @@
     <p class="caps"><%= description %></p>
   </header>
 
-  <div class="x h3 bold caps py3">
+  <div class="center x h3 bold caps py3">
     <div class="xg"><%= filesize(stats.gzipSize) %></div>
     <div class="xg"><%= stats.rules.length %> Rules</div>
   </div>
 
 
   <%= obj.examples %>
+
+  <h2>CSS</h2>
+  <pre class="p2 border border-aqua bg-white"><%= obj.css %></pre>
 
   <footer class="x x-baseline py3 mt4 mxn1">
     <a href="//jxnblk.com/x" class="button button-small ml1 mr1 button-link">x</a>

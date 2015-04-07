@@ -9,7 +9,7 @@ var markedExample = require('marked-example');
 var data = require('../package.json');
 
 var tpl = _.template(fs.readFileSync(path.join(__dirname, './src/template.html'), 'utf8'));
-var css = fs.readFileSync(path.join(__dirname, '../x.min.css'), 'utf8');
+data.css = fs.readFileSync(path.join(__dirname, '../x.css'), 'utf8');
 
 var renderer = new marked.Renderer();
 renderer.code = markedExample({
@@ -35,7 +35,7 @@ renderer.heading = function (text, level) {
 }
 
 
-data.stats = cssstats(css);
+data.stats = cssstats(data.css);
 data.filesize = filesize;
 data.examples = marked( fs.readFileSync(path.join(__dirname, './src/examples.md'), 'utf8'), { renderer: renderer } );
 

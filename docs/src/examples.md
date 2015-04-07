@@ -68,10 +68,10 @@
 ```html
 <div class="x x-baseline">
   <div class="xg p2">
-    <h1>align-items baseline</h1>
+    <h1 class="border-bottom border-aqua">align-items baseline</h1>
   </div>
   <div class="xn p2">
-    <h2>.xn</h2>
+    <h2 class="border-bottom border-aqua">.xn</h2>
   </div>
 </div>
 ```
@@ -81,7 +81,7 @@
 ```html
 <div class="x x-bottom">
   <div class="p2">
-    <h2>align-items end</h2>
+    <h2>align-items flex-end</h2>
     <p>Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.</p>
   </div>
   <div class="xn p2">
