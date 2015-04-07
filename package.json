@@ -1,7 +1,7 @@
 {
-  "name": "x-axis",
+  "name": "dot-x",
   "version": "1.0.0",
-  "description": "Hyperminimal CSS grid layout alternative",
+  "description": "Hyperminimal CSS flexbox grid & micro layout alternative",
   "main": "index.js",
   "scripts": {
     "test": "mocha test",
@@ -30,6 +30,7 @@
     "basscss-base-reset": "0.0.3",
     "basscss-base-typography": "0.0.4",
     "basscss-button-link": "^1.0.1",
+    "basscss-button-outline": "0.0.3",
     "basscss-color-base": "^1.2.0",
     "basscss-color-borders": "0.0.4",
     "basscss-colors": "^1.0.6",
@@ -42,6 +43,8 @@
     "cssnext": "^1.2.1",
     "cssstats": "^1.4.0",
     "filesize": "^3.1.2",
+    "highlight": "^0.2.3",
+    "highlight.js": "^8.5.0",
     "http-server": "^0.8.0",
     "lodash": "^3.6.0",
     "marked": "^0.3.3",

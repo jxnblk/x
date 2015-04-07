@@ -6,6 +6,7 @@ var cssstats = require('cssstats');
 var filesize = require('filesize');
 var marked = require('marked');
 var markedExample = require('marked-example');
+var highlight = require('highlight.js');
 var data = require('../package.json');
 
 var tpl = _.template(fs.readFileSync(path.join(__dirname, './src/template.html'), 'utf8'));
@@ -16,7 +17,7 @@ renderer.code = markedExample({
   classes: {
     container: 'mb2 rounded',
     rendered: 'py2',
-    code: 'm0 p2 border b2 border-aqua'
+    code: 'm0 p2'
   }
 });
 

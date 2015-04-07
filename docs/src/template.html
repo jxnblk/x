@@ -2,39 +2,80 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>x</title>
+  <title>.x</title>
   <meta name="author" content="<%= author %>">
   <meta name="description" content="<%= description %>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="docs/basscss.min.css">
   <link rel="stylesheet" href="x.min.css">
-  <link href="http://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,600,700" rel="stylesheet" type="text/css">
 </head>
 <body class="px3">
 
-  <header class="center py3 mb3">
-    <h1 class="h00 h00-responsive m0">x</h1>
+  <header class="center py4">
+    <h1 class="h00 h00-responsive m0">.x</h1>
     <p class="caps"><%= description %></p>
+    <a href="//github.com/jxnblk/x" class="h6 caps m1 button button-outline">Github</a>
+    <a href="//npmjs.com/package/dot-x" class="h6 caps m1 button button-outline">npm</a>
   </header>
 
-  <div class="center x h3 bold caps py3">
-    <div class="xg"><%= filesize(stats.gzipSize) %></div>
-    <div class="xg"><%= stats.rules.length %> Rules</div>
+  <section id="intro" class="py3 mb3">
+    <p class="h1">
+      A fundamentally different approach to handling layout in CSS
+    </p>
+    <p class="h3">
+      Instead of adding up columns, .x is based around content sizes and dividing up
+      available space, which makes it perfect for responsive web design.
+      No clearfix, white space, or display table hacks – just a simple abstraction of
+      the flexible layout module.
+    </p>
+  </section>
+
+  <div id="stats" class="center sm-x x-justify h6 bold caps p2 border b2">
+    <div class=""><%= filesize(stats.gzipSize) %></div>
+    <div class=""><%= stats.rules.length %> Rules</div>
+    <div class=""><%= stats.aggregates.selectors %> Selectors</div>
+    <div class=""><%= stats.aggregates.declarations %> Declarations</div>
   </div>
 
+  <section id="features" class="py3 mb3">
+    <h2 class="h3 caps">Features</h2>
+    <ul class="bold center sm-x x-wrap list-reset mxn2">
+      <li class="xg p3">Vertical centering</li>
+      <li class="xg p3">Baseline alignment</li>
+      <li class="xg p3">Bottom alignment</li>
+      <li class="xg p3">Flexbox-based resizing</li>
+      <li class="xg p3">Fraction-based widths</li>
+      <li class="xg p3">Wrapping for template-based iterations</li>
+      <li class="xg p3">Equal height stretching</li>
+      <li class="xg p3">Tiled layout for template-based iterations</li>
+      <li class="xg p3">Width-based breakpoints</li>
+    </ul>
+  </section>
 
-  <%= obj.examples %>
 
-  <h2>CSS</h2>
-  <pre class="p2 border border-aqua bg-white"><%= obj.css %></pre>
+  <section id="examples" class="py3 mb3">
+    <h2 class="h3 caps">Examples</h2>
+    <div class="prose">
+      <%= obj.examples %>
+    </div>
+  </section>
 
-  <footer class="x x-baseline py3 mt4 mxn1">
+  <section id="css" class="py3 mb3">
+    <h2 class="caps">CSS</h2>
+    <pre class="p2 border border-aqua bg-white"
+      style="max-height:50vh"><%= obj.css %></pre>
+  </section>
+
+  <footer class="h6 bold x x-baseline py3 mt4 mxn1">
     <a href="//jxnblk.com/x" class="button button-small ml1 mr1 button-link">x</a>
     <div class="px1">
       v<%= version %>
     </div>
+    <a href="//github.com/jxnblk/x" class="ml1 mr1 button button-small button-link">Github</a>
+    <a href="//npmjs.com/package/dot-x" class="ml1 mr1 button button-small button-link">Npm</a>
     <div class="xg"></div>
-    <p class="xn m0 px1">
+    <p class="h6 xn m0 px1">
       Made by
       <a href="//jxnblk.com">Jxnblk</a>
     </p>

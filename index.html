@@ -2,40 +2,76 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>x</title>
+  <title>.x</title>
   <meta name="author" content="Brent Jackson">
-  <meta name="description" content="Hyperminimal CSS grid layout alternative">
+  <meta name="description" content="Hyperminimal CSS flexbox grid & micro layout alternative">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="docs/basscss.min.css">
   <link rel="stylesheet" href="x.min.css">
-  <link href="http://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,600,700" rel="stylesheet" type="text/css">
 </head>
 <body class="px3">
 
-  <header class="center py3 mb3">
-    <h1 class="h00 h00-responsive m0">x</h1>
-    <p class="caps">Hyperminimal CSS grid layout alternative</p>
+  <header class="center py4">
+    <h1 class="h00 h00-responsive m0">.x</h1>
+    <p class="caps">Hyperminimal CSS flexbox grid & micro layout alternative</p>
+    <a href="//github.com/jxnblk/x" class="h6 caps m1 button button-outline">Github</a>
+    <a href="//npmjs.com/package/dot-x" class="h6 caps m1 button button-outline">npm</a>
   </header>
 
-  <div class="center x h3 bold caps py3">
-    <div class="xg">452 B</div>
-    <div class="xg">29 Rules</div>
+  <section id="intro" class="py3 mb3">
+    <p class="h1">
+      A fundamentally different approach to handling layout in CSS
+    </p>
+    <p class="h3">
+      Instead of adding up columns, .x is based around content sizes and dividing up
+      available space, which makes it perfect for responsive web design.
+      No clearfix, white space, or display table hacks – just a simple abstraction of
+      the flexible layout module.
+    </p>
+  </section>
+
+  <div id="stats" class="center sm-x x-justify h6 bold caps p2 border b2">
+    <div class="">502 B</div>
+    <div class="">30 Rules</div>
+    <div class="">32 Selectors</div>
+    <div class="">116 Declarations</div>
   </div>
 
+  <section id="features" class="py3 mb3">
+    <h2 class="h3 caps">Features</h2>
+    <ul class="bold center sm-x x-wrap list-reset mxn2">
+      <li class="xg p3">Vertical centering</li>
+      <li class="xg p3">Baseline alignment</li>
+      <li class="xg p3">Bottom alignment</li>
+      <li class="xg p3">Flexbox-based resizing</li>
+      <li class="xg p3">Fraction-based widths</li>
+      <li class="xg p3">Wrapping for template-based iterations</li>
+      <li class="xg p3">Equal height stretching</li>
+      <li class="xg p3">Tiled layout for template-based iterations</li>
+      <li class="xg p3">Width-based breakpoints</li>
+    </ul>
+  </section>
 
-  <h2 id="basic"><a href="#basic">Basic</a></h2><div class="MarkedExample mb2 rounded">
+
+  <section id="examples" class="py3 mb3">
+    <h2 class="h3 caps">Examples</h2>
+    <div class="prose">
+      <h2 id="basic"><a href="#basic">Basic</a></h2><p>Apply <code>.x</code> to a parent container to align items on the x-axis.</p>
+<div class="MarkedExample mb2 rounded">
   <div class="MarkedExample-rendered py2">
     <div class="x">
   <div class="p2">auto</div>
   <div class="p2">auto</div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p2"</span>&gt;</span>auto<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p2"</span>&gt;</span>auto<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
 </div>
-<h2 id="xg"><a href="#xg">xg</a></h2><div class="MarkedExample mb2 rounded">
+<h2 id="xg"><a href="#xg">xg</a></h2><p>Add <code>.xg</code> to make a child element grow to fill the space.</p>
+<div class="MarkedExample mb2 rounded">
   <div class="MarkedExample-rendered py2">
     <div class="x">
   <div class="xg p2">
@@ -47,7 +83,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xg p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>.xg<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>flex grow<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -70,7 +106,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xg p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>.xg<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>flex grow<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -93,7 +129,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -115,7 +151,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x x-center"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x x-center"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>align-items center<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -136,7 +172,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x x-baseline"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x x-baseline"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xg p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border-bottom border-aqua"</span>&gt;</span>align-items baseline<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -157,7 +193,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x x-bottom"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x x-bottom"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>align-items flex-end<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -179,7 +215,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x2 p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>.x2<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>1/2 width<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -202,7 +238,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x2 p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>.x2<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>1/2 width<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -225,7 +261,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x3 p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>.x3<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>1/3 width<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -252,7 +288,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x3 p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>.x3<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>1/3 width<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -279,7 +315,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x4 p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>.x4<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>1/4 width<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -310,7 +346,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x4 p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>.x4<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>1/4 width<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -341,7 +377,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x6 p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>.x6<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>1/6 width<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -380,7 +416,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x6 p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>.x6<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>1/6 width<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -419,7 +455,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x8 p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>.x8<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>1/8 width<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -466,7 +502,7 @@
   </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x8 p2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>.x8<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>1/8 width<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -512,13 +548,27 @@
   <div class="x2 p2">.x2</div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x x-wrap"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x x-wrap"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x2 p2"</span>&gt;</span>.x2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x2 p2"</span>&gt;</span>.x2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x2 p2"</span>&gt;</span>.x2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x2 p2"</span>&gt;</span>.x2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x2 p2"</span>&gt;</span>.x2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x2 p2"</span>&gt;</span>.x2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<h2 id="x-justify"><a href="#x-justify">x-justify</a></h2><div class="MarkedExample mb2 rounded">
+  <div class="MarkedExample-rendered py2">
+    <div class="x x-justify">
+  <div class="x4 p2">.x4</div>
+  <div class="x4 p2">.x4</div>
+  <div class="x4 p2">.x4</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x x-justify"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x4 p2"</span>&gt;</span>.x4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x4 p2"</span>&gt;</span>.x4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x4 p2"</span>&gt;</span>.x4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
 </div>
 <h2 id="xs"><a href="#xs">xs</a></h2><div class="MarkedExample mb2 rounded">
@@ -550,7 +600,7 @@
   <div class="xs p2">.xs</div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x x-wrap"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x x-wrap"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xs p2"</span>&gt;</span>.xs<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xs p2"</span>&gt;</span>.xs<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xs p2"</span>&gt;</span>.xs<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -577,36 +627,40 @@
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xs p2"</span>&gt;</span>.xs<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
 </div>
-<h2 id="xm"><a href="#xm">xm</a></h2><div class="MarkedExample mb2 rounded">
+<h2 id="xm-overflow"><a href="#xm-overflow">xm overflow</a></h2><div class="MarkedExample mb2 rounded">
   <div class="MarkedExample-rendered py2">
-    <div class="x x-wrap">
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
+    <div class="overflow-auto">
+  <div class="x xx-wrap">
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+  </div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x x-wrap"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"overflow-auto"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x xx-wrap"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xm p2"</span>&gt;</span>.xm<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
 </div>
 <h2 id="xl"><a href="#xl">xl</a></h2><div class="MarkedExample mb2 rounded">
@@ -626,7 +680,7 @@
   <div class="xl p2">.xl</div>
 </div>
   </div>
-  <pre class="MarkedExample-code m0 p2 border b2 border-aqua"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x x-wrap"</span>&gt;</span>
+  <pre class="MarkedExample-code m0 p2"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"x x-wrap"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xl p2"</span>&gt;</span>.xl<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xl p2"</span>&gt;</span>.xl<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xl p2"</span>&gt;</span>.xl<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -642,14 +696,16 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
 </div>
 
+    </div>
+  </section>
 
-  <h2>CSS</h2>
-  <pre class="p2 border border-aqua bg-white">
+  <section id="css" class="py3 mb3">
+    <h2 class="caps">CSS</h2>
+    <pre class="p2 border border-aqua bg-white"
+      style="max-height:50vh">
+*, *:before, *:after { box-sizing: border-box }
+
 .x { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex }
-
-.x > div {
-  box-sizing: border-box;
-}
 
 .x1 { -webkit-box-flex: 0; -webkit-flex: 0 0 100%; -ms-flex: 0 0 100%; flex: 0 0 100% }
 .x2 { -webkit-box-flex: 0; -webkit-flex: 0 0 50%; -ms-flex: 0 0 50%; flex: 0 0 50% }
@@ -669,6 +725,7 @@
 .x-baseline { -webkit-box-align: baseline; -webkit-align-items: baseline; -ms-flex-align: baseline; align-items: baseline }
 .x-bottom   { -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end }
 .x-wrap     { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap }
+.x-justify  { -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between }
 
 @media (min-width: 40em) {
   .sm-x { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex }
@@ -692,14 +749,17 @@
 }
 
 </pre>
+  </section>
 
-  <footer class="x x-baseline py3 mt4 mxn1">
+  <footer class="h6 bold x x-baseline py3 mt4 mxn1">
     <a href="//jxnblk.com/x" class="button button-small ml1 mr1 button-link">x</a>
     <div class="px1">
       v1.0.0
     </div>
+    <a href="//github.com/jxnblk/x" class="ml1 mr1 button button-small button-link">Github</a>
+    <a href="//npmjs.com/package/dot-x" class="ml1 mr1 button button-small button-link">Npm</a>
     <div class="xg"></div>
-    <p class="xn m0 px1">
+    <p class="h6 xn m0 px1">
       Made by
       <a href="//jxnblk.com">Jxnblk</a>
     </p>

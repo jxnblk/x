@@ -1,6 +1,8 @@
 
 ## Basic
 
+Apply `.x` to a parent container to align items on the x-axis.
+
 ```html
 <div class="x">
   <div class="p2">auto</div>
@@ -9,6 +11,8 @@
 ```
 
 ## xg
+
+Add `.xg` to make a child element grow to fill the space.
 
 ```html
 <div class="x">
@@ -290,6 +294,16 @@
 </div>
 ```
 
+## x-justify
+
+```html
+<div class="x x-justify">
+  <div class="x4 p2">.x4</div>
+  <div class="x4 p2">.x4</div>
+  <div class="x4 p2">.x4</div>
+</div>
+```
+
 ## xs
 
 ```html
@@ -321,22 +335,24 @@
 </div>
 ```
 
-## xm
+## xm overflow
 
 ```html
-<div class="x x-wrap">
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
-  <div class="xm p2">.xm</div>
+<div class="overflow-auto">
+  <div class="x xx-wrap">
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+    <div class="xm p2">.xm</div>
+  </div>
 </div>
 ```
 

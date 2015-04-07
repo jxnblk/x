@@ -1,9 +1,7 @@
 
-.x { display: flex }
+*, *:before, *:after { box-sizing: border-box }
 
-.x > div {
-  box-sizing: border-box;
-}
+.x { display: flex }
 
 .x1 { flex: 0 0 100% }
 .x2 { flex: 0 0 calc(1/2 * 100%) }
@@ -23,6 +21,7 @@
 .x-baseline { align-items: baseline }
 .x-bottom   { align-items: flex-end }
 .x-wrap     { flex-wrap: wrap }
+.x-justify  { justify-content: space-between }
 
 @media (--breakpoint-sm) {
   .sm-x { display: flex }
